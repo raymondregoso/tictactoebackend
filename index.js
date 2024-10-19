@@ -17,10 +17,7 @@ app.use(express.json());
 app.use('/', player);
 
 // Database connection
-mongoose.connect("mongodb+srv://raymondregoso:admin123@cluster0.tzc7fco.mongodb.net/tic-tac-toe?retryWrites=true&w=majority", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+mongoose.connect("mongodb+srv://raymondregoso:admin123@cluster0.tzc7fco.mongodb.net/tic-tac-toe?retryWrites=true&w=majority");
 
 mongoose.connection.once('open', () => console.log("Now connected to MongoDB Atlas."));
 
